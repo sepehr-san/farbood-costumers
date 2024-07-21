@@ -15,13 +15,14 @@ body {
   background: radial-gradient(circle at center, antiquewhite 0%, white 100%);
 }
 header {
-  padding-block: 20px;
+  padding: 30px 0 60px 0;
 }
 h1 {
   text-align: center;
 }
 h2 {
   font-size: 1rem;
+  text-align: center;
 }
 main {
   display: flex;
@@ -33,7 +34,7 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   margin: 10px 10px;
   filter: blur(0px);
   transition: all .2s;
@@ -42,12 +43,18 @@ main {
   cursor: pointer;
 }
 .icon-container img {
-  border-radius: 20px;
+  border: 2px, solid black;
+  box-shadow: 5px 5px black;
 }
 #details-container {
   position: absolute;
-  background-color: rgb(198, 203, 236);
-  border-radius: 20px;
+  top: 13%;
+  left: 17%;
+  width: 67%;
+  background-color: rgb(248, 94, 94);
+  /* border-radius: 20px; */
+  border: 2px, solid black;
+  box-shadow: 5px 5px black;
   padding: 40px;
   height: 80%;
   overflow: scroll;
@@ -64,7 +71,8 @@ main {
 #details-container iframe {
   aspect-ratio: 1/1;
   width: 500px;
-  border-radius: 20px;
+  border: 2px, solid black;
+  box-shadow: 5px 5px black;
 }
 #details-container #close-button {
   position: absolute;
@@ -74,4 +82,15 @@ main {
 }
 #close-button:hover {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  #details-container {
+    top: 13%;
+    left: 5%;
+    width: 90%;
+  }
+  #details-container iframe {
+    width: 288px;
+}
 }
