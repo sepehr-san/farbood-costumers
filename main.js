@@ -1,10 +1,11 @@
-const hamraheAval = document.getElementById("hamrahe-aval-button");
 const iconContainer = document.getElementById("icon-container");
+const header = document.querySelector("header");
 const detailsContainer = document.getElementById("details-container");
 const detailsHtml = document.querySelector(".details-html");
 const closeButton = document.getElementById("close-button");
 const logos = document.querySelectorAll(".corporate-button");
-let isPopUp = false;
+const pageBody = document.querySelector("main");
+// let isPopUp = false;
 
 const detailsData = {
   "hamrahe-aval-button": {
@@ -25,6 +26,7 @@ const detailsData = {
   },
 };
 
+
 logos.forEach((logo) => {
   logo.addEventListener("click", () => {
     isPopUp = true;
@@ -34,12 +36,15 @@ logos.forEach((logo) => {
     iconContainer.style.filter = "blur(5px)";
     detailsContainer.style.visibility = "visible";
     detailsContainer.style.filter = "opacity(1)";
+    header.style.filter = "blur(5px)";
   });
 });
 
 closeButton.addEventListener("click", function () {
-  isPopUp = false;
   iconContainer.style.filter = "blur(0px)";
   detailsContainer.style.visibility = "hidden";
   detailsContainer.style.filter = "opacity(0)";
+  header.style.filter = "blur(0px)";
+  // isPopUp = false;
 });
+
