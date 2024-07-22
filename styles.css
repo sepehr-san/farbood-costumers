@@ -13,6 +13,7 @@
 body {
   font-family: diodrum;
   background: radial-gradient(circle at center, antiquewhite 0%, white 100%);
+  background-image: url("img/back.jpg");
 }
 header {
   padding: 30px 0 60px 0;
@@ -58,7 +59,8 @@ main {
   border: 2px, solid black;
   box-shadow: 5px 5px black;
   padding: 40px;
-  height: 80%;
+  height: fit-content;
+  max-height: 80%;
   overflow: scroll;
   visibility: hidden;
   filter:opacity(0);
