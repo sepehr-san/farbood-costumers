@@ -49,8 +49,9 @@ main {
 }
 #details-container {
   position: absolute;
-  top: 13%;
-  left: 17%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 67%;
   background-color: rgb(248, 94, 94);
   /* border-radius: 20px; */
@@ -70,8 +71,7 @@ main {
   gap: 20px;
 }
 #details-container iframe {
-  aspect-ratio: 1/1;
-  width: 500px;
+  width: 100%;
   border: 2px, solid black;
   box-shadow: 5px 5px black;
 }
@@ -87,11 +87,6 @@ main {
 
 @media only screen and (max-width: 500px) {
   #details-container {
-    top: 13%;
-    left: 5%;
     width: 90%;
   }
-  #details-container iframe {
-    width: 288px;
-}
 }
