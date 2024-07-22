@@ -24,8 +24,17 @@ const detailsData = {
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7215345343197048833?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 <h2>گزارش کارگاه-بازی بازخورد موثر</h2>`,
   },
-};
+  "snappfood-button": {
+    detail: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7198279290109444097?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>گزارش رویداد روز جهانی PMO</h2>
 
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7200775715317764097?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>بازخورد مدیر ارشد پروژه از روز جهانی PMO</h2>
+
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7173272758645051393?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>بازخورد مدیر مرکز تعالی منابع انسانی از رویداد تیم‌سازی</h2>`,
+  },
+};
 
 logos.forEach((logo) => {
   logo.addEventListener("click", () => {
@@ -47,4 +56,3 @@ closeButton.addEventListener("click", function () {
   header.style.filter = "blur(0px)";
   // isPopUp = false;
 });
-

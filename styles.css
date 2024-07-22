@@ -12,11 +12,11 @@
 
 body {
   font-family: diodrum;
-  background: radial-gradient(circle at center, antiquewhite 0%, white 100%);
   background-image: url("img/back.jpg");
 }
 header {
   padding: 30px 0 60px 0;
+  filter: blur(0px);
   transition: all .2s;
 }
 h1 {
@@ -25,6 +25,7 @@ h1 {
 h2 {
   font-size: 1rem;
   text-align: center;
+  direction: rtl;
 }
 main {
   display: flex;
@@ -85,6 +86,13 @@ main {
 }
 #close-button:hover {
   cursor: pointer;
+}
+.corporate-button {
+  transform: scale(1);
+  transition: all .2s;
+}
+.corporate-button:hover {
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 500px) {
