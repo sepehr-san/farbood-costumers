@@ -1,10 +1,11 @@
 const iconContainer = document.getElementById("icon-container");
 const header = document.querySelector("header");
 const detailsContainer = document.getElementById("details-container");
+const popupContent = document.querySelector(".popup-content");
 const detailsHtml = document.querySelector(".details-html");
 const closeButton = document.getElementById("close-button");
 const logos = document.querySelectorAll(".corporate-button");
-const pageBody = document.querySelector("main");
+const pageBody = document.querySelector("body");
 // let isPopUp = false;
 
 const detailsData = {
@@ -42,17 +43,27 @@ logos.forEach((logo) => {
     let logoId = logo.id;
     let details = detailsData[logoId]["detail"];
     detailsHtml.innerHTML = details;
+    detailsContainer.style.display = "block";
+
     iconContainer.style.filter = "blur(5px)";
-    detailsContainer.style.visibility = "visible";
-    detailsContainer.style.filter = "opacity(1)";
     header.style.filter = "blur(5px)";
   });
 });
 
 closeButton.addEventListener("click", function () {
+  detailsHtml.innerHTML = " ";
+
+  detailsContainer.style.display = "none";
   iconContainer.style.filter = "blur(0px)";
-  detailsContainer.style.visibility = "hidden";
-  detailsContainer.style.filter = "opacity(0)";
   header.style.filter = "blur(0px)";
   // isPopUp = false;
+});
+
+detailsContainer.addEventListener("click", function (event) {
+  if (event.target !== popupContent && !popupContent.contains(event.target)) {
+
+    detailsContainer.style.display = "none";
+    iconContainer.style.filter = "blur(0px)";
+    header.style.filter = "blur(0px)";
+  }
 });
