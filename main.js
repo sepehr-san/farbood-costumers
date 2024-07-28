@@ -41,7 +41,20 @@ const detailsData = {
   },
   "royan-button": {
     detail: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7197891900861759488?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-<h2>کارگاه-بازی بازخورد موثر</h2>`,
+<h2>کارگاه-بازی بازخورد موثر</h2><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7198652001302327297?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>بازخورد کارمند پژوهشگاه از کارگاه-بازی</h2>`,
+  },
+  "khodro45-button": {
+    detail: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7195353658274828288?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>کارگاه-بازی ارزیابی عملکرد</h2>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7189923056872562688?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>کارگاه-بازی ارزیابی روز دوم</h2>`,
+  },
+  "pilsan-button": {
+    detail: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7182749904077762560?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>رویداد بازی آخر سال</h2>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7195338707405623296?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>بازخورد مدیر منابع انسانی از رویداد بازی</h2>`,
   },
   "digikala-button": {
     detail: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7149394306301063168?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
@@ -80,11 +93,25 @@ const detailsData = {
     detail: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7157424575885033472?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 <h2>طراحی بازی کارتی اختصاصی برای جشن یلدا</h2>`,
   },
+  "fakoor-button": {
+    detail: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7191355877830864896?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>بازخورد معاون سرمایه‌های انسانی از رویداد بازی</h2>`,
+  },
+  "hamrahtel-button": {
+    detail: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7187820756502740992?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>بازخورد مسئول ارتباطات سازمانی از بازی سین‌جیم</h2>`,
+  },
   "cobel-button": {
     detail: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7172871797405659136?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 <h2>رویداد تیم‌سازی آخر سال در کیش</h2>
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7140356077941952512?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-<h2>کارگاه-بازی تعامل و بازخورد موثر</h2>`,
+<h2>کارگاه-بازی تعامل و بازخورد موثر</h2>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7192794663940947970?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>رویداد بازی</h2>`,
+  },
+  "ibshop-button": {
+    detail: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7208079966188486656?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>بازخورد مسئول دیجیتال مارکتینگ از رویداد بازی</h2>`,
   },
   "mapna-button": {
     detail: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7170054575620616192?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
@@ -119,6 +146,10 @@ const detailsData = {
 
 <h2>بازخورد شرکت‌کنندگان جوان مپنایی از مجموعه کارگاه-بازی‌ها</h2>`,
   },
+  "boors-button": {
+    detail: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7173645805487173632?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<h2>کارگاه-بازی مدیریت عملکرد</h2>`,
+  },
 };
 
 logos.forEach((logo) => {
@@ -135,20 +166,20 @@ logos.forEach((logo) => {
 });
 
 closeButton.addEventListener("click", function () {
-  detailsHtml.innerHTML = "";
   detailsContainer.style.visibility = "hidden";
   detailsContainer.style.opacity = "0";
   iconContainer.style.filter = "blur(0px)";
   header.style.filter = "blur(0px)";
+  detailsHtml.innerHTML = "";
   // isPopUp = false;
 });
 
 detailsContainer.addEventListener("click", function (event) {
   if (event.target !== popupContent && !popupContent.contains(event.target)) {
-    detailsHtml.innerHTML = "";
     detailsContainer.style.visibility = "hidden";
     detailsContainer.style.opacity = "0";
     iconContainer.style.filter = "blur(0px)";
     header.style.filter = "blur(0px)";
+    detailsHtml.innerHTML = "";
   }
 });
