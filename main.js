@@ -43,8 +43,8 @@ logos.forEach((logo) => {
     let logoId = logo.id;
     let details = detailsData[logoId]["detail"];
     detailsHtml.innerHTML = details;
-    detailsContainer.style.display = "block";
-
+    detailsContainer.style.visibility = "visible";
+    detailsContainer.style.opacity = "1";
     iconContainer.style.filter = "blur(5px)";
     header.style.filter = "blur(5px)";
   });
@@ -52,8 +52,8 @@ logos.forEach((logo) => {
 
 closeButton.addEventListener("click", function () {
   detailsHtml.innerHTML = " ";
-
-  detailsContainer.style.display = "none";
+  detailsContainer.style.visibility = "hidden";
+  detailsContainer.style.opacity = "0";
   iconContainer.style.filter = "blur(0px)";
   header.style.filter = "blur(0px)";
   // isPopUp = false;
@@ -61,8 +61,8 @@ closeButton.addEventListener("click", function () {
 
 detailsContainer.addEventListener("click", function (event) {
   if (event.target !== popupContent && !popupContent.contains(event.target)) {
-
-    detailsContainer.style.display = "none";
+    detailsContainer.style.visibility = "hidden";
+    detailsContainer.style.opacity = "0";
     iconContainer.style.filter = "blur(0px)";
     header.style.filter = "blur(0px)";
   }
