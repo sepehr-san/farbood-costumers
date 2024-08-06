@@ -250,7 +250,7 @@ logos.forEach((logo) => {
     if (detailsHtml.children.length >= 3) {
       setTimeout(() => {
         detailsHtml.classList.add("animate");
-      }, 500);
+      }, 2000);
     }
   });
 });
