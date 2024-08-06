@@ -6,6 +6,8 @@ const detailsHtml = document.querySelector(".details-html");
 const closeButton = document.getElementById("close-button");
 const logos = document.querySelectorAll(".corporate-button");
 const pageBody = document.querySelector("body");
+const secondIframe = document.querySelector(".details-html :nth-child(2)");
+const thirdElement = document.querySelector('.details-html :nth-child(3)');
 // let isPopUp = false;
 
 const detailsData = {
@@ -242,6 +244,9 @@ logos.forEach((logo) => {
     detailsContainer.style.opacity = "1";
     iconContainer.style.filter = "blur(5px)";
     header.style.filter = "blur(5px)";
+    if (detailsHtml.children.length >= 3) {setTimeout(() => {
+      detailsHtml.classList.add('animate');
+    }, 2000);}
   });
 });
 
@@ -251,6 +256,7 @@ closeButton.addEventListener("click", function () {
   iconContainer.style.filter = "blur(0px)";
   header.style.filter = "blur(0px)";
   detailsHtml.innerHTML = "";
+  detailsHtml.classList.remove('animate');
   // isPopUp = false;
 });
 
@@ -261,5 +267,6 @@ detailsContainer.addEventListener("click", function (event) {
     iconContainer.style.filter = "blur(0px)";
     header.style.filter = "blur(0px)";
     detailsHtml.innerHTML = "";
+    detailsHtml.classList.remove('animate');
   }
 });
